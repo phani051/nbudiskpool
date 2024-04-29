@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="ISO-8859-1">
+<title>NBU DP Status</title>
+<style type="text/css">
+      <!-- TD{font-family: Tahoma; font-size: 10pt;border: 3px solid black; border-style: double; text-align:center; }  TH{font-family: Tahoma; font-size: 12pt;border: 3px solid black; border-style: double; text-align:center; } --->
+    </style>
+<script>
+function myFunction(){
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who do not match the search query
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td") ; 
+    for(j=0 ; j<td.length ; j++)
+    {
+      var tdata = td[j] ;
+      if (tdata) {
+        if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          break ; 
+        } else {
+          tr[i].style.display = "none";
+        }
+      } 
+    }
+  }
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+<style type="text/css">
+      .add_red {
+        background-color: red;
+      }
+
+      .add_orange {
+        background-color: orange;
+      }
+
+      .add_yellow {
+        background-color: yellow;
+      }
+
+      .add_green {
+        background-color: green;
+      }
+
+	#myTable{
+	margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+	}
+
+	</style>
+
+</head>
+<body>
+<table width="100%" border="9" bordercolor="purple">
+      <tr>
+        <td bgcolor="white" valign="top">
+          <br />
+          <p style="text-align: center; font-size: 16pt; font-family: Tahoma">
+            <b
+              >&nbsp A T & T - NetBackup Diskpool(PureDisk &StoreOnce) status Report
+            </b>
+          </p>
+          <br />
+          <input
+            type="text"
+            id="myInput"
+            onkeyup="myFunction()"
+            placeholder="Search in all Fields...."
+            title="Type in a Search String"
+            autofocus="autofocus"
+          />
+<table width="100%" border="1" id="myTable">
+	<tr>
+		<th>Master</th>
+		<th>DiskPool</th>
+		<th>Full</th>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>VAp01_ovanbu02med02-nebr</td>
+		<td>77.67</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>VAp01_fvanbu03med02</td>
+		<td>70.95</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>VAp01_fvanbu02med02</td>
+		<td>70.38</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>VAp01_ovanbu02med01-nebr</td>
+		<td>69.24</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>VAp01_fvanbu02med01</td>
+		<td>68.59</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>VAp01_fvanbu03med01</td>
+		<td>64.94</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>VAp01_ovanbu03med01-nebr</td>
+		<td>43.88</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>VAp01_ovanbu03med02-nebr</td>
+		<td>36.88</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>VAp01_fvamed01</td>
+		<td>7.61</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>VAp01_ovamed01</td>
+		<td>2.66</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_OFP_Catalog_olph437</td>
+		<td>0.47</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_OFP_PROD_Windows_FS_olph437</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_OFP_PROD_Linux_FS_olph437</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_OFP_NonPROD_Windows_FS_olph437</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_OFP_NonPROD_Linux_FS_olph437</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_OFP_Catalog_olph437_dup</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_FFP_PROD_Windows_FS_fsprd448_Rep</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>olph437</td>
+		<td>dp_FFP_PROD_Linux_FS_fsprd448_Rep</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>dp_FFP_Catalog_flpd633_dup</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>dp_FFP_Catalog_flpd633</td>
+		<td>0.00</td>
+	</tr>
+	<tr>
+		<td>flpd633</td>
+		<td>cfp_test_dp</td>
+		<td>0.00</td>
+	</tr>
+</td></tr></table></table></body>
+<script>
+      $("td:nth-child(3)").each(function () {
+        if (parseInt($(this).text()) >= 85) {
+          $(this).addClass("add_red");
+        } else if (parseInt($(this).text()) >= 75) {
+          $(this).addClass("add_yellow");
+        } else if (parseInt($(this).text()) >= 0) {
+          $(this).addClass("add_green");
+        }
+      });
+    </script></html>
