@@ -1,2 +1,2 @@
 # nbudiskpool
-HTML Report o the NetBackup Diskpools
+HTML Report of the NetBackup Diskpools
