@@ -1,3 +1,4 @@
+# shellcheck disable=SC1017
 touch /home/pr0488/sts
 rm -f /home/pr0488/sts
 #sudo /usr/openv/netbackup/bin/admincmd/nbdevquery -liststs | awk '{print $3}' | sort | uniq > /home/pr0488/sts

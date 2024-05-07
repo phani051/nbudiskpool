@@ -14,12 +14,14 @@ ssh -t -t -i ~/pr0488 -o StrictHostKeyChecking=no alph332.aldc.att.com ""/usr/op
 ssh -t -t -i ~/pr0488 -o StrictHostKeyChecking=no asprd559.aldc.att.com ""/usr/openv/netbackup/local/scripts/dpstatus"" >>~/dpout
 sed -i 's/\(No disk volumes found!\)//' ~/dpout
 sed -i '/^\s*$/d' ~/dpout
+
 cat /home/pr0488/dpout | head -n 1 >~/dpstatus
 cat /home/pr0488/dpout | sed -n '1!p' | sort -n -r -k 3 >>~/dpstatus
 cat ~/dpstatus | {
   cat
   echo
 } | /home/pr0488/tabulatev2.sh -d "," -t "NBU DP Status" -h "Disk Pool Status" >~/dpstatus.html
+
 echo '<script>
       $("td:nth-child(3)").each(function () {
         if (parseInt($(this).text()) >= 85) {
